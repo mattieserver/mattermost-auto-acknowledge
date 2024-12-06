@@ -1,5 +1,7 @@
 # mattermost-auto-acknowledge
 
+Automatically react to all messages send by a person in a certain team and channel in mattermost. 
+
 ## Build
 
 ```bash
