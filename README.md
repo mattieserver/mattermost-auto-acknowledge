@@ -1,0 +1,1 @@
+# matermost-auto-acknowledge
