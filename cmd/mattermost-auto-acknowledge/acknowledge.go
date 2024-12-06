@@ -12,11 +12,11 @@ func acknowledgeMessage(mattermosthttp *httphelper.MattermostClient, teamName st
 	slog.Info("Acknowledging all messages")
 
 	teamid, _ := mattermosthttp.GetTeamId(teamName)
-	slog.Info(teamid)
+	slog.Info(fmt.Sprintf("Mapped team name %s to id %s", teamName, teamid))
 	channelid, _ := mattermosthttp.GetChannelId(teamid, channelName)
-	slog.Info(channelid)
+	slog.Info(fmt.Sprintf("Mapped channel name %s to id %s", channelName, channelid))
 	userid,_ := mattermosthttp.GetUserId(userName)
-	slog.Info(userid)
+	slog.Info(fmt.Sprintf("Mapped username name %s to id %s", userName, userid))
 
 	posts_ids,_ := mattermosthttp.GetPosts(channelid, userid, includeSubMessages)
 

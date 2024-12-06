@@ -123,7 +123,7 @@ func (e *MattermostClient) LikePost(postid string) {
 		}
 	}
 	if !reacted {
-		slog.Info("Reacting to post")
+		slog.Info(fmt.Sprintf("Reacting to post with id %s", postid))
 		reaction := mattermost.Reaction{
 			UserId:    e.userid,
 			PostId:    postid,
